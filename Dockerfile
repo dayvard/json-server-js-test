@@ -16,8 +16,9 @@ COPY . .
 # Build the app (if needed)
 RUN npm run build --if-present
 
-# Expose port (change if your app uses a different port)
-EXPOSE 3000
+
+# Expose the port expected by Cloud Run
+EXPOSE 8080
 
 # Start the app
 CMD ["npm", "start"]
